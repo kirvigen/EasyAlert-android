@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="RedLight">#83FF9D9D</color>
+    <color name="Red">#F73131</color>
+    <color name="GreenLight">#6FA1FA91</color>
+    <color name="Green">#5DD146</color>
+    <color name="GrayMiddle">#262930</color>
+    <color name="GrayLight">#888888</color>
+    <color name="BlueLight">#D2D4FF</color>
+    <color name="Blue">#4988f4</color>
+    <color name="Transparent">#00000000</color>
+</resources>
