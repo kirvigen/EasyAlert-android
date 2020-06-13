@@ -8,7 +8,6 @@
 
 # Install
 
-Add the following line to your dependencies:
 ```groovy
 allprojects {
 		repositories {
@@ -17,6 +16,7 @@ allprojects {
 		}
 	}
 ```
+Add the following line to your dependencies:
 ```groovy
 dependencies {
 	implementation 'com.github.kirvigen:EasyAlert:0.1.0'
