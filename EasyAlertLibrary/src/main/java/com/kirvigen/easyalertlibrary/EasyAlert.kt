@@ -21,10 +21,10 @@ import kotlinx.android.synthetic.main.alert.view.*
 
 
 
-class EasyAlert (context: Context): Dialog(context) {
+open class EasyAlert (context: Context): Dialog(context) {
 
     var inputText:String = ""
-    private val mView: View = LayoutInflater.from(context).inflate(R.layout.alert, null, false)
+    open val mView: View = LayoutInflater.from(context).inflate(R.layout.alert, null, false)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

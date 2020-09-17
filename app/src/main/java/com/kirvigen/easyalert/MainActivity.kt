@@ -1,5 +1,6 @@
 package com.kirvigen.easyalert
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -7,20 +8,20 @@ import com.kirvigen.easyalertlibrary.EasyAlert
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.editText
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         simple.setOnClickListener {
-            EasyAlert(this).setTitle("Warning!").setTextBody("Your is beautiful")
+            EasyAlert(this).setTitle("Warning!").setTextBody("This is simple Alert")
                 .setNeutral("Ok",
                     {a->a.dismiss()},
-                    resources.getColor(R.color.Blue))
+                   Color.parseColor("#4988f4"))
                 .show()
         }
         buttons.setOnClickListener {
-            EasyAlert(this).setTitle("Warning!").setTextBody("Your is beautiful")
+            EasyAlert(this).setTitle("Warning!").setTextBody("This is medium Alert")
                 .setPositive("Yes!") { a-> a.dismiss()}
                 .setNegative("No!"){a->a.dismiss()}
                 .setNeutral("Cancel",{a->a.dismiss()})
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
         imageRes.setOnClickListener {
             EasyAlert(this).setTopImage(R.drawable.image)
-                .setTitle("Warning!").setTextBody("Your is beautiful")
+                .setTitle("Warning!").setTextBody("You can show image resource in top alert.")
                 .setPositive("Yes!") { a-> a.dismiss()}
                 .setNegative("No!"){a->a.dismiss()}
                 .setNeutral("Cancel",{a->a.dismiss()})
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
         imageUrl.setOnClickListener {
             EasyAlert(this).setTopImage("https://avatars.mds.yandex.net/get-pdb/1964870/f271cd11-8868-4bcd-93e7-e911d2254a90/s1200")
-                .setTitle("Warning!").setTextBody("Your is beautiful")
+                .setTitle("Warning!").setTextBody("You can show image internet in top alert.")
                 .setPositive("Yes!") { a-> a.dismiss()}
                 .setNegative("No!"){a->a.dismiss()}
                 .setNeutral("Cancel",{a->a.dismiss()})
